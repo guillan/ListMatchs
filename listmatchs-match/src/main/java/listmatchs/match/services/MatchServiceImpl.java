@@ -22,7 +22,7 @@ public class MatchServiceImpl implements MatchService {
 
   @Override
   public List<Match> getMatchsByDate(String date) {
-    return Lists.newArrayList(matchRepository.findByDate(date));
+    return matchRepository.findByDate(date);
   }
 
   @Override
