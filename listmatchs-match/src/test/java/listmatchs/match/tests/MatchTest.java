@@ -6,9 +6,9 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 
-import listmatchs.match.config.MatchConfig;
 import listmatchs.match.entities.Match;
 import listmatchs.match.services.MatchService;
+import listmatchs.security.config.DatabaseConfig;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +22,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * planter s'il y a deja des données en base. */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = MatchConfig.class)
+@SpringApplicationConfiguration(classes = DatabaseConfig.class)
 public class MatchTest {
 
   @Autowired

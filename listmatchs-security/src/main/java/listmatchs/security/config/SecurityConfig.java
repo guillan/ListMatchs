@@ -1,20 +1,22 @@
 package listmatchs.security.config;
 
-import listmatchs.match.config.MatchConfig;
 import listmatchs.security.services.ListmatchsUserDetailsService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Import;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+/* Classe contenant la config de Spring security */
+
 @EnableAutoConfiguration
 @EnableWebSecurity
-@Import({ MatchConfig.class })
+@Import({ DatabaseConfig.class })
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
   
   @Autowired
@@ -41,6 +43,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      * utilisé pour une vrai application en production */
     http.httpBasic();
     
+    // le dossier listmatchs est accessible à tous
+    http.authorizeRequests().antMatchers(HttpMethod.GET, "/listmatchs", "/listmatchs/**").permitAll();
+
     /* Pour acceder a l'ensemble de l'application il faut être 
      * authentifié avec un role GUEST */
     http.authorizeRequests() //

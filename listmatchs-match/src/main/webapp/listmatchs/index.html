@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="listmatchs">
+<head>
+    <title>Liste des matchs</title>
+    <!-- META -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Angular client for ListMatchs">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body>
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="col-xs-offset-2 col-xs-8">
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+	<script type="text/javascript" src="lib/angular.min.js"></script>
+	<script type="text/javascript" src="lib/angular-route.min.js"></script>
+	<script type="text/javascript" src="lib/angular-cookies.min.js"></script>
+	<script type="text/javascript" src="lib/angular-base64.min.js"></script>
+	<script type="text/javascript" src="modules/main.js"></script>
+	<script type="text/javascript" src="controllers/loginController.js"></script>
+	<script type="text/javascript" src="controllers/matchsController.js"></script>
+	<script type="text/javascript" src="services/loginService.js"></script>
+	<script type="text/javascript" src="services/matchsService.js"></script>
+	<script type="text/javascript" src="services/config.js"></script>
+</body>
+</html>

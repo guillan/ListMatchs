@@ -2,7 +2,7 @@ package listmatchs.security.tests;
 
 import java.util.List;
 
-import listmatchs.security.config.SecurityConfig;
+import listmatchs.security.config.DatabaseConfig;
 import listmatchs.security.entities.Role;
 import listmatchs.security.entities.User;
 import listmatchs.security.repositories.RoleRepository;
@@ -22,7 +22,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /* Quelques tests junit pour tester que tout fonctionne correctement
  * pour Spring security */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = SecurityConfig.class)
+@SpringApplicationConfiguration(classes = DatabaseConfig.class)
 public class SecurityTest {
 
   @Autowired
