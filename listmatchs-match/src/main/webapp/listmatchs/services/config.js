@@ -5,7 +5,7 @@
 angular.module('listmatchs')
   .factory('config', function () {
     return {
-    	url: "http://localhost:8080/matchs/",
-    	nb_date: "7"
+      url: "http://localhost:8080/matchs/",
+      nb_date: "7"
     }
   });

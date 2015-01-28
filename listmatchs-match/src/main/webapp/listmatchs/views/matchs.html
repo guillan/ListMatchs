@@ -4,21 +4,21 @@
   </select>
   <div ng-show="error" class="alert alert-danger">{{error}}</div>
   <div ng-show="show" class="form-group">
-	  <table class="table" ng-if="matchs.length > 0">
-	    <thead>
-	      <tr>
-	        <th class="col-md-2">Heure</th>
-	        <th class="col-md-10">Match</th>
-	      </tr>
-	    </thead>
-	    <tbody>
-	      <tr ng-repeat="match in matchs">
-	        <td>{{ match.time }}</td>
-	        <td>{{ match.homeTeam }} - {{ match.awayTeam }}</td>
-	      </tr>
-	    </tbody>
-	  </table>
-	  <p class="alert alert-info" ng-show="matchs.length == 0">Pas de match ce jour</p>
+    <table class="table" ng-if="matchs.length > 0">
+      <thead>
+        <tr>
+          <th class="col-md-2">Heure</th>
+          <th class="col-md-10">Match</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="match in matchs">
+          <td>{{ match.time }}</td>
+          <td>{{ match.homeTeam }} - {{ match.awayTeam }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="alert alert-info" ng-show="matchs.length == 0">Pas de match ce jour</p>
   </div>
   <p><a href="#/login">Logout</a></p>
 </div>
